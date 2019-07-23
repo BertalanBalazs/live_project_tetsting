@@ -13,4 +13,12 @@ public class Initializer {
         wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(new AjaxElementLocatorFactory(this.driver, 10), this);
     }
+
+    public void navigate(String subUrl) {
+        driver.navigate().to(System.getenv("baseUrl") + subUrl);
+    }
+
+    public void navigate() {
+        driver.navigate().to(System.getenv("baseUrl"));
+    }
 }

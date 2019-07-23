@@ -14,7 +14,10 @@ abstract class BaseTest {
         System.setProperty("webdriver.chrome.driver", System.getenv("webdriverPath"));
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        makePomInstances();
     }
+
+    protected abstract void makePomInstances();
 
     @AfterEach
     void tearDown() {
