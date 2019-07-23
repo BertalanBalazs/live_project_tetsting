@@ -49,7 +49,6 @@ public class MainPage extends Initializer {
         searchButton.click();
     }
 
-}
 
     public boolean isElementDisplayedOnTheScreen(String elementName) {
         try {
