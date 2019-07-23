@@ -1,3 +1,5 @@
+package com.codecool.lpt.pageObjects;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,12 +35,9 @@ public class MainPage extends Initializer {
     WebElement lightTheme;
 
 
-
     public MainPage(WebDriver driver) {
         super(driver);
     }
-
-
 
 
 }
