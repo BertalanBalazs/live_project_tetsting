@@ -1,6 +1,9 @@
+package com.codecool.lpt.pageObjects;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends Initializer {
     @FindBy(id = "filterByCategory")
@@ -32,6 +35,11 @@ public class MainPage extends Initializer {
             "                            ']")
     WebElement lightTheme;
 
+    @FindBy(xpath = "//button[@value='1']")
+    WebElement firstProductAddButton;
+
+    @FindBy(xpath = "//button[@value='3']")
+    WebElement thirdProductAddButton;
 
 
     public MainPage(WebDriver driver) {
@@ -39,6 +47,19 @@ public class MainPage extends Initializer {
     }
 
 
+    public void clickOnFirstProductAddButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(firstProductAddButton));
+        firstProductAddButton.click();
+    }
+
+    public void clickOnShoppingCart() {
+        wait.until(ExpectedConditions.elementToBeClickable(shoppingCartButton));
+        shoppingCartButton.click();
+    }
 
 
+    public void clickOnThirdProductAddButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
+        thirdProductAddButton.click();
+    }
 }
