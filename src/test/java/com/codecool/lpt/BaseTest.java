@@ -16,7 +16,6 @@ abstract class BaseTest {
         driver.manage().window().maximize();
     }
 
-
     @AfterEach
     void tearDown() {
         driver.close();
