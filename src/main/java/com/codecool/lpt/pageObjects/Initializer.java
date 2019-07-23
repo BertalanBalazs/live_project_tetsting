@@ -7,12 +7,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Initializer {
 
-    protected final WebDriver driver;
-    protected WebDriverWait wait;
+    final WebDriver driver;
 
-    public Initializer(WebDriver driver) {
+    Initializer(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(this.driver, 10);
+        WebDriverWait wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(new AjaxElementLocatorFactory(this.driver, 10), this);
     }
 
@@ -22,5 +21,9 @@ public class Initializer {
 
     public void navigate() {
         driver.navigate().to(System.getenv("baseUrl"));
+    }
+
+    public String getCurrentPageTitle() {
+        return driver.getTitle();
     }
 }
