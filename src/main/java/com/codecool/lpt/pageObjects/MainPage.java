@@ -1,3 +1,7 @@
+package com.codecool.lpt.pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,13 +36,23 @@ public class MainPage extends Initializer {
             "                            ']")
     WebElement lightTheme;
 
-
-
     public MainPage(WebDriver driver) {
         super(driver);
     }
 
+    public void sendKeyToSearchInput(String text) {
+        searchInput.sendKeys(text);
+    }
 
+    public void clickToSearchButton() {
+        searchButton.click();
+    }
 
-
+    public boolean isElementDisplayedOnTheScreen(String elementName) {
+        try {
+            return driver.findElement(By.xpath("//*[text()='" + elementName + "']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
 }
