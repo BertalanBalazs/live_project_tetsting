@@ -1,13 +1,18 @@
 package com.codecool.lpt.pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
 public class MainPage extends Initializer {
     @FindBy(id = "filterByCategory")
-    WebElement filertByCategory;
+    WebElement filterByCategory;
 
     @FindBy(id = "filterBySupplier")
     WebElement filterBySupplier;
@@ -61,5 +66,52 @@ public class MainPage extends Initializer {
     public void clickOnThirdProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
         thirdProductAddButton.click();
+    }
+    public void sendKeyToSearchInput(String text) {
+        searchInput.sendKeys(text);
+    }
+
+    public void clickToSearchButton() {
+        searchButton.click();
+    }
+
+
+    public boolean isElementDisplayedOnTheScreen(String elementName) {
+        try {
+            return driver.findElement(By.xpath("//*[text()='" + elementName + "']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public void clickOnCategory() {
+        //TODO double click need!
+        filterByCategory.click();
+        filterByCategory.click();
+    }
+
+    public void clickOnGroupCategory() {
+        wait.until(ExpectedConditions.elementToBeClickable(groupCategory));
+        groupCategory.click();
+    }
+
+    public List<String> getProductsName() {
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//h4[@class='card-title']"))));
+        List<WebElement> products = driver.findElements(By.xpath("//h4[@class='card-title']"));
+        List<String> names = new ArrayList<String>();
+        for (WebElement product : products) {
+            names.add(product.getText());
+        }
+        return names;
+    }
+
+    public void clickOnSupplier() {
+        filterBySupplier.click();
+        filterBySupplier.click();
+    }
+
+    public void clickOnCartoonSupplier() {
+        wait.until(ExpectedConditions.elementToBeClickable(cartoonNetworkSupplier));
+        cartoonNetworkSupplier.click();
     }
 }
