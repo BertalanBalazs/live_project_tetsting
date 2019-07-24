@@ -40,6 +40,12 @@ public class MainPage extends Initializer {
             "                            ']")
     WebElement lightTheme;
 
+    @FindBy(xpath = "//button[@id='theme']")
+    WebElement themeChanger;
+
+    @FindBy(xpath = "//nav[@id='index_navbar']")
+    WebElement navbar;
+
 
     public MainPage(WebDriver driver) {
         super(driver);
@@ -91,5 +97,24 @@ public class MainPage extends Initializer {
     public void clickOnCartoonSupplier() {
         wait.until(ExpectedConditions.elementToBeClickable(cartoonNetworkSupplier));
         cartoonNetworkSupplier.click();
+    }
+
+    public void clickOnThemeChanger() {
+        themeChanger.click();
+        themeChanger.click();
+    }
+
+    public void clickOnDarkTheme() {
+        darkTheme.click();
+    }
+
+
+    public String getColorOfNavBar() {
+        wait.until(ExpectedConditions.visibilityOf(navbar));
+        return navbar.getCssValue("background-color");
+    }
+
+    public void clickOnLightTheme() {
+        lightTheme.click();
     }
 }
