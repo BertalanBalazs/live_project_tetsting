@@ -1,6 +1,7 @@
 package com.codecool.lpt.pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,6 +55,7 @@ public class MainPage extends Initializer {
 
     public void clickOnFirstProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(firstProductAddButton));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", firstProductAddButton);
         firstProductAddButton.click();
     }
 
@@ -65,6 +67,7 @@ public class MainPage extends Initializer {
 
     public void clickOnThirdProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", thirdProductAddButton);
         thirdProductAddButton.click();
     }
     public void sendKeyToSearchInput(String text) {
