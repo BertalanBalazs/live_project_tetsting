@@ -1,7 +1,7 @@
 package com.codecool.lpt.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,9 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class MainPage extends Initializer {
-    @FindBy(xpath = "//button[@id='filterByCategory']")
+    @FindBy(id = "filterByCategory")
     WebElement filterByCategory;
 
     @FindBy(id = "filterBySupplier")
@@ -40,6 +41,12 @@ public class MainPage extends Initializer {
             "                            ']")
     WebElement lightTheme;
 
+    @FindBy(xpath = "//button[@value='1']")
+    WebElement firstProductAddButton;
+
+    @FindBy(xpath = "//button[@value='3']")
+    WebElement thirdProductAddButton;
+
     @FindBy(xpath = "//button[@id='theme']")
     WebElement themeChanger;
 
@@ -51,6 +58,24 @@ public class MainPage extends Initializer {
         super(driver);
     }
 
+
+    public void clickOnFirstProductAddButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(firstProductAddButton));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", firstProductAddButton);
+        firstProductAddButton.click();
+    }
+
+    public void clickOnShoppingCart() {
+        wait.until(ExpectedConditions.elementToBeClickable(shoppingCartButton));
+        shoppingCartButton.click();
+    }
+
+
+    public void clickOnThirdProductAddButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", thirdProductAddButton);
+        thirdProductAddButton.click();
+    }
     public void sendKeyToSearchInput(String text) {
         searchInput.sendKeys(text);
     }
