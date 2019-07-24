@@ -8,10 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Initializer {
 
     final WebDriver driver;
+    final WebDriverWait wait;
 
     Initializer(WebDriver driver) {
         this.driver = driver;
-        WebDriverWait wait = new WebDriverWait(this.driver, 10);
+        wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(new AjaxElementLocatorFactory(this.driver, 10), this);
     }
 
