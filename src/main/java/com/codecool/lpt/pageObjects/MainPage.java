@@ -29,12 +29,15 @@ public class MainPage extends Initializer {
     WebElement cartoonNetworkSupplier;
 
     @FindBy(xpath = "//a[text()='Dark\n" +
-            "                            ']")
+            "']")
     WebElement darkTheme;
 
     @FindBy(xpath = "//a[text()='Light\n" +
             "                            ']")
     WebElement lightTheme;
+
+    @FindBy(id = "theme")
+    WebElement themeSelectorDropdownMenu;
 
     public MainPage(WebDriver driver) {
         super(driver);
@@ -55,4 +58,11 @@ public class MainPage extends Initializer {
             return false;
         }
     }
+
+    public void switchThemeToDark() throws InterruptedException {
+        themeSelectorDropdownMenu.click();
+        darkTheme.click();
+    }
+
+
 }
