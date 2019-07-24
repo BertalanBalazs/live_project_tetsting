@@ -57,4 +57,13 @@ public class MainPage extends Initializer {
             return false;
         }
     }
+
+    public void clickOnCategory() {
+        filertByCategory.click();
+    }
+
+    public void clickOnGroupCategory() {
+
+        groupCategory.click();
+    }
 }
