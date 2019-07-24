@@ -17,7 +17,7 @@ abstract class BaseTest {
         makePomInstances();
     }
 
-    void makePomInstances(){}
+    protected abstract void makePomInstances();
 
     @AfterEach
     void tearDown() {
