@@ -16,7 +16,9 @@ public class ProductAddingTests extends BaseTest {
     protected void makePomInstances() {
         mainPage = new MainPage(driver);
         shoppingCartPage = new ShoppingCartPage(driver);
+        shoppingCartPage.navigateToShoppingCartPage().clearShoppingCart();
     }
+
 
     @Test
     void addOneProductToShoppingCart() {
