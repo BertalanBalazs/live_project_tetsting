@@ -85,8 +85,9 @@ public class MainPage extends Initializer {
         return this;
     }
 
-    public void clickToSearchButton() {
+    public MainPage clickToSearchButton() {
         searchButton.click();
+        return this;
     }
 
 
@@ -153,5 +154,18 @@ public class MainPage extends Initializer {
     public MainPage clickOnLightTheme() {
         lightTheme.click();
         return this;
+    }
+
+    public int getNumOfProducts() {
+        int i = 1;
+        while (true){
+            try {
+                driver.findElement(By.xpath("//div["+i+"]/div[@class='card' and 1]"));
+            } catch (Exception e) {
+                break;
+            }
+            i++;
+        }
+        return i-1;
     }
 }
