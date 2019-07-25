@@ -1,5 +1,7 @@
 package com.codecool.lpt.pageObjects;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +15,12 @@ public class ShoppingCartPage extends Initializer {
 
     @FindBy(xpath = "//*[@class='btn btn-outline-success my-2 my-sm-0 bootstrap-button']")
     WebElement backToHomePageButton;
+
+    @FindBy(xpath = "//a[@href='/checkout']")
+    WebElement checkoutButton;
+
+    @FindBy(xpath = "//td")
+    WebElement shoppingCartIsEmpty;
 
     public ShoppingCartPage(WebDriver driver) {
         super(driver);
@@ -32,5 +40,17 @@ public class ShoppingCartPage extends Initializer {
 
     public void clickBackToHomePageButton() {
         backToHomePageButton.click();
+    }
+
+    public boolean checkCheckoutButtonIsDisplayed() {
+        return checkoutButton.isDisplayed();
+    }
+
+    public boolean shoppingCartIsEmpty() {
+        try {
+            return !driver.findElement(By.xpath("//td")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return true;
+        }
     }
 }
