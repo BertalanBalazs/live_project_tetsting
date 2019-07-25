@@ -11,6 +11,9 @@ public class ShoppingCartPage extends Initializer {
     @FindBy(xpath = "//tr[2]/td[2]")
     WebElement secondProductQuantity;
 
+    @FindBy(xpath = "//*[@class='btn btn-outline-success my-2 my-sm-0 bootstrap-button']")
+    WebElement backToHomePageButton;
+
     public ShoppingCartPage(WebDriver driver) {
         super(driver);
     }
@@ -25,5 +28,9 @@ public class ShoppingCartPage extends Initializer {
 
     public void clearShoppingCart() {
 
+    }
+
+    public void clickBackToHomePageButton() {
+        backToHomePageButton.click();
     }
 }
