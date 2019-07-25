@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SearchTest extends BaseTest {
+public class SearchTests extends BaseTest {
     private MainPage mainPage;
 
     @Override

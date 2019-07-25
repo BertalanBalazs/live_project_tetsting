@@ -1,16 +1,20 @@
 package com.codecool.lpt;
 
 import com.codecool.lpt.pageObjects.MainPage;
+import com.codecool.lpt.pageObjects.ShoppingCartPage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class CheckBackToHomePageButtonTest extends BaseTest {
+public class ShoppingCartPageTests extends BaseTest {
     private MainPage mainPage;
+    private ShoppingCartPage shoppingCartPage;
 
     @Override
     protected void makePomInstances() {
         mainPage = new MainPage(driver);
+        shoppingCartPage = new ShoppingCartPage(driver);
     }
 
     @Test
@@ -23,5 +27,13 @@ public class CheckBackToHomePageButtonTest extends BaseTest {
                 .getCurrentUrl();
 
         assertEquals(mainPageUrl, actualUrl, "Not the same!");
+    }
+
+    @Test
+    void tryToCheckOutWithoutAnyItemInTheShoppingCart() {
+        shoppingCartPage.navigateToShoppingCartPage()
+                .clearShoppingCart();
+
+        assertFalse(shoppingCartPage.checkCheckoutButtonIsDisplayed(), "Checkout button is visible, but the shopping cart is empty!");
     }
 }
