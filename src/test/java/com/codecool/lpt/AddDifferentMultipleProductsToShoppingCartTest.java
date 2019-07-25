@@ -17,7 +17,7 @@ public class AddDifferentMultipleProductsToShoppingCartTest extends BaseTest {
     }
 
     @Test
-    void addOneProductToShoppingCart() {
+    void addDifferentMultipleProductToShoppingCart() {
         mainPage.navigate();
         mainPage.clickOnFirstProductAddButton();
         mainPage.clickOnFirstProductAddButton();
