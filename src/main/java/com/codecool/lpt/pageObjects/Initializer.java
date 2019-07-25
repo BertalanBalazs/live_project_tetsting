@@ -20,8 +20,9 @@ public class Initializer {
         driver.navigate().to(System.getenv("baseUrl") + subUrl);
     }
 
-    public void navigate() {
+    public MainPage navigate() {
         driver.navigate().to(System.getenv("baseUrl"));
+        return (MainPage) this;
     }
 
     public String getCurrentPageTitle() {

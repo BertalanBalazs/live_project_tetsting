@@ -19,10 +19,11 @@ public class AddOneProductToShoppingCartTest extends BaseTest {
 
     @Test
     void addOneProductToShoppingCart() {
-        mainPage.navigate();
-        mainPage.clickOnFirstProductAddButton();
-        mainPage.clickOnShoppingCart();
-        int result = shoppingCartPage.getProductQuantityOfFirstProduct();
+        int result = mainPage.navigate()
+                .clickOnFirstProductAddButton()
+                .clickOnShoppingCart()
+                .getProductQuantityOfFirstProduct();
+
         assertEquals(result, 1);
     }
 

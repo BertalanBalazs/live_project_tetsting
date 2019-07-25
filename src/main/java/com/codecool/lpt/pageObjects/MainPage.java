@@ -59,25 +59,29 @@ public class MainPage extends Initializer {
     }
 
 
-    public void clickOnFirstProductAddButton() {
+    public MainPage clickOnFirstProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(firstProductAddButton));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", firstProductAddButton);
         firstProductAddButton.click();
+        return this;
     }
 
-    public void clickOnShoppingCart() {
+    public ShoppingCartPage clickOnShoppingCart() {
         wait.until(ExpectedConditions.elementToBeClickable(shoppingCartButton));
         shoppingCartButton.click();
+        return new ShoppingCartPage(driver);
     }
 
 
-    public void clickOnThirdProductAddButton() {
+    public MainPage clickOnThirdProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", thirdProductAddButton);
         thirdProductAddButton.click();
+        return this;
     }
-    public void sendKeyToSearchInput(String text) {
+    public MainPage sendKeyToSearchInput(String text) {
         searchInput.sendKeys(text);
+        return this;
     }
 
     public void clickToSearchButton() {
@@ -93,15 +97,16 @@ public class MainPage extends Initializer {
         }
     }
 
-    public void clickOnCategory() {
-        //TODO double click need!
+    public MainPage clickOnCategory() {
         filterByCategory.click();
         filterByCategory.click();
+        return this;
     }
 
-    public void clickOnGroupCategory() {
+    public MainPage clickOnGroupCategory() {
         wait.until(ExpectedConditions.elementToBeClickable(groupCategory));
         groupCategory.click();
+        return this;
     }
 
     public List<String> getProductsName() {
@@ -114,23 +119,28 @@ public class MainPage extends Initializer {
         return names;
     }
 
-    public void clickOnSupplier() {
+    public MainPage clickOnSupplier() {
         filterBySupplier.click();
         filterBySupplier.click();
+        return this;
     }
 
-    public void clickOnCartoonSupplier() {
+    public MainPage clickOnCartoonSupplier() {
         wait.until(ExpectedConditions.elementToBeClickable(cartoonNetworkSupplier));
         cartoonNetworkSupplier.click();
+        return this;
     }
 
-    public void clickOnThemeChanger() {
+
+    public MainPage clickOnThemeChanger() {
         themeChanger.click();
         themeChanger.click();
+        return this;
     }
 
-    public void clickOnDarkTheme() {
+    public MainPage clickOnDarkTheme() {
         darkTheme.click();
+        return this;
     }
 
 
@@ -139,7 +149,8 @@ public class MainPage extends Initializer {
         return navbar.getCssValue("background-color");
     }
 
-    public void clickOnLightTheme() {
+    public MainPage clickOnLightTheme() {
         lightTheme.click();
+        return this;
     }
 }

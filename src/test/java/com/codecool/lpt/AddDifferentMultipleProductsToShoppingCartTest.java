@@ -18,12 +18,11 @@ public class AddDifferentMultipleProductsToShoppingCartTest extends BaseTest {
 
     @Test
     void addDifferentMultipleProductToShoppingCart() {
-        mainPage.navigate();
-        mainPage.clickOnFirstProductAddButton();
-        mainPage.clickOnFirstProductAddButton();
-        mainPage.clickOnThirdProductAddButton();
-        mainPage.clickOnThirdProductAddButton();
-        mainPage.clickOnShoppingCart();
+        mainPage.navigate().clickOnFirstProductAddButton()
+                .clickOnFirstProductAddButton()
+                .clickOnThirdProductAddButton()
+                .clickOnThirdProductAddButton()
+                .clickOnShoppingCart();
 
         int resultFirst = shoppingCartPage.getProductQuantityOfFirstProduct();
         int resultSecond = shoppingCartPage.getProductQuantityOfSecondProduct();
@@ -32,7 +31,7 @@ public class AddDifferentMultipleProductsToShoppingCartTest extends BaseTest {
     }
 
     @AfterEach
-    void clearShoppingCart(){
+    void clearShoppingCart() {
         shoppingCartPage.clearShoppingCart();
     }
 }

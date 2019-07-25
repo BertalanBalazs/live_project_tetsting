@@ -15,14 +15,14 @@ public class ChangeThemeToLightFromDark extends BaseTest {
 
     @Test
     void changeThemeToDark(){
-        mainPage.navigate();
-        mainPage.clickOnThemeChanger();
-        mainPage.clickOnDarkTheme();
-        String darkThemeColor = mainPage.getColorOfNavBar();
+        String darkThemeColor = mainPage.navigate()
+                .clickOnThemeChanger()
+                .clickOnDarkTheme()
+                .getColorOfNavBar();
 
-        mainPage.clickOnThemeChanger();
-        mainPage.clickOnLightTheme();
-        String lightThemeColor = mainPage.getColorOfNavBar();
+        String lightThemeColor = mainPage.clickOnThemeChanger()
+                .clickOnLightTheme()
+                .getColorOfNavBar();
 
         assertNotEquals(lightThemeColor, darkThemeColor);
     }

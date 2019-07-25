@@ -12,11 +12,13 @@ public class CheckBackToHomePageButton extends BaseTest {
 
     @Test
     void searchInTheTitleAndDescription() {
-        mainPage.navigate();
-        String mainPageUrl = mainPage.getCurrentUrl();
-        mainPage.clickOnShoppingCart();
-        shoppingCartPage.clickBackToHomePageButton();
-        String actualUrl = mainPage.getCurrentUrl();
+        String mainPageUrl = mainPage.navigate()
+                .getCurrentUrl();
+
+        String actualUrl = mainPage.clickOnShoppingCart()
+                .clickBackToHomePageButton()
+                .getCurrentUrl();
+
         assertEquals(mainPageUrl, actualUrl, "Not the same!");
 
     }

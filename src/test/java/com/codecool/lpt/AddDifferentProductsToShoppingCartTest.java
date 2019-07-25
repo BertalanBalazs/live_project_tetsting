@@ -20,10 +20,10 @@ public class AddDifferentProductsToShoppingCartTest extends BaseTest {
 
     @Test
     void addDifferentProductToShoppingCart() {
-        mainPage.navigate();
-        mainPage.clickOnFirstProductAddButton();
-        mainPage.clickOnThirdProductAddButton();
-        mainPage.clickOnShoppingCart();
+        mainPage.navigate()
+                .clickOnFirstProductAddButton()
+                .clickOnThirdProductAddButton()
+                .clickOnShoppingCart();
 
         int resultFirst = shoppingCartPage.getProductQuantityOfFirstProduct();
         int resultSecond = shoppingCartPage.getProductQuantityOfSecondProduct();

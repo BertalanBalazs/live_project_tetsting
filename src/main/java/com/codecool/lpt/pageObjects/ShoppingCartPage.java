@@ -66,7 +66,8 @@ public class ShoppingCartPage extends Initializer {
         }
     }
 
-    public void clickBackToHomePageButton() {
+    public MainPage clickBackToHomePageButton() {
         backToHomePageButton.click();
+        return new MainPage(driver);
     }
 }
