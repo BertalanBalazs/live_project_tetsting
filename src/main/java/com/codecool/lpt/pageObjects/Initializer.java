@@ -27,4 +27,8 @@ public class Initializer {
     public String getCurrentPageTitle() {
         return driver.getTitle();
     }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
 }
