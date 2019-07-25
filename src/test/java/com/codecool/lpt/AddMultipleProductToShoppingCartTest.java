@@ -11,6 +11,12 @@ public class AddMultipleProductToShoppingCartTest extends BaseTest {
     private MainPage mainPage;
     private ShoppingCartPage shoppingCartPage;
 
+    @Override
+    protected void makePomInstances() {
+        mainPage = new MainPage(driver);
+        shoppingCartPage = new ShoppingCartPage(driver);
+    }
+
     @Test
     void addMultipleProductToShoppingCart() {
         mainPage.navigate();
@@ -22,13 +28,7 @@ public class AddMultipleProductToShoppingCartTest extends BaseTest {
     }
 
     @AfterEach
-    void deleteComponent(){
+    void clearShoppingCart(){
         shoppingCartPage.clearShoppingCart();
-    }
-
-    @Override
-    protected void makePomInstances() {
-        mainPage = new MainPage(driver);
-        shoppingCartPage = new ShoppingCartPage(driver);
     }
 }
