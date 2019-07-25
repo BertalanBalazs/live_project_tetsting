@@ -12,4 +12,4 @@ target/
 *.ear
 
 # log files
-*.log
+*.log.idea/.idea/
