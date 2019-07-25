@@ -53,6 +53,17 @@ public class MainPage extends Initializer {
     @FindBy(xpath = "//nav[@id='index_navbar']")
     WebElement navbar;
 
+    @FindBy(xpath = "//strong[text()='Customer Service']")
+    WebElement customerService;
+
+    @FindBy(xpath = "//input[@id='btn-input']")
+    WebElement customerServiceInput;
+
+    @FindBy(xpath = "//div[@class='chatbox__body__message chatbox__body__message--Chuck_Norris']/div[@class='ul_section_full' and 2]/ul[@class='ul_msg' and 1]/li[1]/strong[1]")
+    WebElement getCustomerServiceAnswerTitle;
+
+    @FindBy(xpath = "//button[@id='send-message']")
+    WebElement customerServiceSendButton;
 
     public MainPage(WebDriver driver) {
         super(driver);
@@ -167,5 +178,24 @@ public class MainPage extends Initializer {
             i++;
         }
         return i-1;
+    }
+
+    public MainPage clickOnCustomerService() {
+        customerService.click();
+        return this;
+    }
+
+    public MainPage sendKeyToCustomerServiceInput(String text) {
+        customerServiceInput.sendKeys(text);
+        return this;
+    }
+
+    public String customerServiceAnswererName() {
+        return getCustomerServiceAnswerTitle.getText();
+    }
+
+    public MainPage clickOnMessageSendButton() {
+        customerServiceSendButton.click();
+        return this;
     }
 }
