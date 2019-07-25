@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AddOneProductToShoppingCartTest extends BaseTest {
-    MainPage mainPage;
-    ShoppingCartPage shoppingCartPage;
+    private MainPage mainPage;
+    private ShoppingCartPage shoppingCartPage;
 
     @Override
     protected void makePomInstances() {
@@ -28,7 +28,7 @@ public class AddOneProductToShoppingCartTest extends BaseTest {
     }
 
     @AfterEach
-    void clearShoppingCart(){
+    void clearShoppingCart() {
         shoppingCartPage.clearShoppingCart();
     }
 }

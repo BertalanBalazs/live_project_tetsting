@@ -61,7 +61,7 @@ public class MainPage extends Initializer {
 
     public MainPage clickOnFirstProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(firstProductAddButton));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", firstProductAddButton);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", firstProductAddButton);
         firstProductAddButton.click();
         return this;
     }
@@ -75,10 +75,11 @@ public class MainPage extends Initializer {
 
     public MainPage clickOnThirdProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", thirdProductAddButton);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", thirdProductAddButton);
         thirdProductAddButton.click();
         return this;
     }
+
     public MainPage sendKeyToSearchInput(String text) {
         searchInput.sendKeys(text);
         return this;

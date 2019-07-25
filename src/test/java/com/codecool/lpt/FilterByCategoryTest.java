@@ -8,8 +8,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class FilterByCategory extends BaseTest {
-    MainPage mainPage;
+public class FilterByCategoryTest extends BaseTest {
+    private MainPage mainPage;
 
     @Override
     protected void makePomInstances() {

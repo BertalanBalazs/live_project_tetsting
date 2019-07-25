@@ -8,8 +8,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class FilterBySupplierAndCategory extends BaseTest {
-    MainPage mainPage;
+public class FilterBySupplierTest extends BaseTest {
+    private MainPage mainPage;
 
     @Override
     protected void makePomInstances() {
@@ -17,15 +17,18 @@ public class FilterBySupplierAndCategory extends BaseTest {
     }
 
     @Test
-    void filterByCategory() {
+    void filterBySupplier() {
         List<String> names = mainPage.navigate()
-                .clickOnCategory()
-                .clickOnGroupCategory()
+                .clickOnSupplier()
                 .clickOnSupplier()
                 .clickOnCartoonSupplier()
                 .getProductsName();
 
         List<String> excepted = new ArrayList<String>();
+        excepted.add("Dee Dee");
+        excepted.add("Johnny Bravo");
+        excepted.add("Mandark");
+        excepted.add("Mojo Jojo");
         excepted.add("Powerpuff Girls");
         assertArrayEquals(excepted.toArray(), names.toArray());
     }

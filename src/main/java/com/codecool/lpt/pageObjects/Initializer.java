@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Initializer {
 
     protected final WebDriver driver;
-    protected WebDriverWait wait;
+    WebDriverWait wait;
 
-    public Initializer(WebDriver driver) {
+    Initializer(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(this.driver, 10);
         PageFactory.initElements(new AjaxElementLocatorFactory(this.driver, 10), this);
@@ -25,8 +25,9 @@ public class Initializer {
         return (MainPage) this;
     }
 
-    public String getCurrentPageTitle() {
-        return driver.getTitle();
+    public ShoppingCartPage navigateToShoppingCartPage() {
+        driver.navigate().to(System.getenv("baseUrl") + "/shopping-cart");
+        return (ShoppingCartPage) this;
     }
 
     public String getCurrentUrl() {

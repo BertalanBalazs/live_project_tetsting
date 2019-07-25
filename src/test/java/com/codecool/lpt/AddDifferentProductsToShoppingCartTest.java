@@ -1,6 +1,5 @@
 package com.codecool.lpt;
 
-import com.codecool.lpt.pageObjects.CheckoutPage;
 import com.codecool.lpt.pageObjects.MainPage;
 import com.codecool.lpt.pageObjects.ShoppingCartPage;
 import org.junit.Assert;
@@ -17,7 +16,6 @@ public class AddDifferentProductsToShoppingCartTest extends BaseTest {
         shoppingCartPage = new ShoppingCartPage(driver);
     }
 
-
     @Test
     void addDifferentProductToShoppingCart() {
         mainPage.navigate()
@@ -32,7 +30,7 @@ public class AddDifferentProductsToShoppingCartTest extends BaseTest {
     }
 
     @AfterEach
-    void clearShoppingCart(){
+    void clearShoppingCart() {
         shoppingCartPage.clearShoppingCart();
     }
 }

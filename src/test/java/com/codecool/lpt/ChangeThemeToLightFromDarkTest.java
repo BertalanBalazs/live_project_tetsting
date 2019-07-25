@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class ChangeThemeToLightFromDark extends BaseTest {
+public class ChangeThemeToLightFromDarkTest extends BaseTest {
     private MainPage mainPage;
 
     @Override
@@ -14,7 +14,7 @@ public class ChangeThemeToLightFromDark extends BaseTest {
     }
 
     @Test
-    void changeThemeToDark(){
+    void changeThemeToLightFromDark() {
         String darkThemeColor = mainPage.navigate()
                 .clickOnThemeChanger()
                 .clickOnDarkTheme()

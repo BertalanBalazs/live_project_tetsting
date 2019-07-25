@@ -29,7 +29,7 @@ public class AddMultipleProductToShoppingCartTest extends BaseTest {
     }
 
     @AfterEach
-    void clearShoppingCart(){
+    void clearShoppingCart() {
         shoppingCartPage.clearShoppingCart();
     }
 }

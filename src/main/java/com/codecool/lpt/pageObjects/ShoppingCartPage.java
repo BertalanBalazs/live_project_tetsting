@@ -1,11 +1,6 @@
 package com.codecool.lpt.pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
@@ -43,11 +38,11 @@ public class ShoppingCartPage extends Initializer {
         int row = 0;
         int deletedProductsNum = 0;
         List<WebElement> initProducts = driver.findElements(By.xpath("//button[@class='btn btn-danger']"));
-        while (true){
+        while (true) {
             int productQuantity = -1;
             try {
-                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//tr["+row+"]/td[2]")));
-                productQuantity = Integer.parseInt(driver.findElement(By.xpath("//tr["+row+"]/td[2]")).getText());
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//tr[" + row + "]/td[2]")));
+                productQuantity = Integer.parseInt(driver.findElement(By.xpath("//tr[" + row + "]/td[2]")).getText());
             } catch (Exception e) {
                 row++;
             }
@@ -61,13 +56,13 @@ public class ShoppingCartPage extends Initializer {
             }
 
             List<WebElement> products = driver.findElements(By.xpath("//button[@class='btn btn-danger']"));
-            if(products.size() == 0){
+            if (products.size() == 0) {
                 break;
             }
-            if((initProducts.size()-deletedProductsNum) > products.size()){
+            if ((initProducts.size() - deletedProductsNum) > products.size()) {
                 deletedProductsNum++;
             }
-            if (productQuantity == 0){
+            if (productQuantity == 0) {
                 value++;
             }
 
