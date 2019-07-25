@@ -4,6 +4,7 @@ import com.codecool.lpt.pageObjects.CheckoutPage;
 import com.codecool.lpt.pageObjects.MainPage;
 import com.codecool.lpt.pageObjects.ShoppingCartPage;
 import org.junit.Assert;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 public class AddDifferentProductsToShoppingCartTest extends BaseTest {
@@ -18,15 +19,20 @@ public class AddDifferentProductsToShoppingCartTest extends BaseTest {
 
 
     @Test
-    void addOneProductToShoppingCart() {
-        mainPage.navigate();
-        mainPage.clickOnFirstProductAddButton();
-        mainPage.clickOnThirdProductAddButton();
-        mainPage.clickOnShoppingCart();
+    void addDifferentProductToShoppingCart() {
+        mainPage.navigate()
+                .clickOnFirstProductAddButton()
+                .clickOnThirdProductAddButton()
+                .clickOnShoppingCart();
 
         int resultFirst = shoppingCartPage.getProductQuantityOfFirstProduct();
         int resultSecond = shoppingCartPage.getProductQuantityOfSecondProduct();
         Assert.assertEquals(1, resultFirst);
         Assert.assertEquals(1, resultSecond);
+    }
+
+    @AfterEach
+    void clearShoppingCart(){
+        shoppingCartPage.clearShoppingCart();
     }
 }

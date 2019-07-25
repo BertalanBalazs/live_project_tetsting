@@ -18,15 +18,17 @@ public class FilterByCategory extends BaseTest {
 
     @Test
     void filterByCategory() {
-        mainPage.navigate();
-        mainPage.clickOnCategory();
-        mainPage.clickOnGroupCategory();
-        List<String> names = mainPage.getProductsName();
+        List<String> names = mainPage.navigate()
+                .clickOnCategory()
+                .clickOnGroupCategory()
+                .getProductsName();
+
         List<String> excepted = new ArrayList<String>();
         excepted.add("Inside Out");
         excepted.add("Powerpuff Girls");
         excepted.add("The Incredibles");
         excepted.add("Toy Story");
+
         assertArrayEquals(excepted.toArray(), names.toArray());
     }
 }

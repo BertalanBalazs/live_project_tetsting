@@ -18,10 +18,12 @@ public class FilterBySupplier extends BaseTest {
 
     @Test
     void filterByCategory() {
-        mainPage.navigate();
-        mainPage.clickOnSupplier();
-        mainPage.clickOnCartoonSupplier();
-        List<String> names = mainPage.getProductsName();
+        List<String> names = mainPage.navigate()
+                .clickOnSupplier()
+                .clickOnSupplier()
+                .clickOnCartoonSupplier()
+                .getProductsName();
+
         List<String> excepted = new ArrayList<String>();
         excepted.add("Dee Dee");
         excepted.add("Johnny Bravo");
