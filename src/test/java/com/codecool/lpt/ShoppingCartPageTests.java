@@ -36,4 +36,20 @@ public class ShoppingCartPageTests extends BaseTest {
 
         assertFalse(shoppingCartPage.checkCheckoutButtonIsDisplayed(), "Checkout button is visible, but the shopping cart is empty!");
     }
+
+    @Test
+    void checkTotalPriceIsShownTheCorrespondingValue() {
+        String expectedValue = "990";
+        String expectedValueString = "Total price: " + expectedValue + ".0 USD";
+
+        shoppingCartPage.navigateToShoppingCartPage().clearShoppingCart();
+
+        mainPage.navigate().clickOnFirstProductAddButton()
+                .clickOnFirstProductAddButton()
+                .clickOnThirdProductAddButton()
+                .clickOnThirdProductAddButton()
+                .clickOnShoppingCart();
+
+        assertEquals(expectedValueString, shoppingCartPage.totalPrice());
+    }
 }
