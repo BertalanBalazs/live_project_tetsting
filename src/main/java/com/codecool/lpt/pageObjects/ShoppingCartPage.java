@@ -18,6 +18,9 @@ public class ShoppingCartPage extends Initializer {
     @FindBy(xpath = "//a[@href='/checkout']")
     WebElement checkoutButton;
 
+    @FindBy(xpath = "//h4")
+    WebElement totalPrice;
+
     @FindBy(xpath = "//td")
     WebElement shoppingCartIsEmpty;
 
@@ -76,6 +79,10 @@ public class ShoppingCartPage extends Initializer {
 
     public boolean checkCheckoutButtonIsDisplayed() {
         return checkoutButton.isDisplayed();
+    }
+
+    public String totalPrice(){
+        return totalPrice.getText();
     }
 
     public boolean shoppingCartIsEmpty() {
