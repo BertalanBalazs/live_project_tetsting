@@ -27,12 +27,13 @@ public class MainPage extends Initializer {
     @FindBy(xpath = "//a[@class='btn btn-outline-success my-2 my-sm-0 bootstrap-button']")
     WebElement shoppingCartButton;
 
-    @FindBy(xpath = "//a[5]")
+    @FindBy(xpath = "//a[text()='Group']")
     WebElement groupCategory;
 
     @FindBy(xpath = "//a[text()='Cartoon Network']")
     WebElement cartoonNetworkSupplier;
 
+    //Todo text contains*
     @FindBy(xpath = "//a[text()='Dark\n" +
             "                            ']")
     WebElement darkTheme;
@@ -83,7 +84,7 @@ public class MainPage extends Initializer {
         return new ShoppingCartPage(driver);
     }
 
-
+    //TODO Util class for scroll function
     public MainPage clickOnThirdProductAddButton() {
         wait.until(ExpectedConditions.elementToBeClickable(thirdProductAddButton));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", thirdProductAddButton);
@@ -125,8 +126,11 @@ public class MainPage extends Initializer {
     public List<String> getProductsName() {
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//h4[@class='card-title']"))));
         List<WebElement> products = driver.findElements(By.xpath("//h4[@class='card-title']"));
-        List<String> names = new ArrayList<String>();
-        for (WebElement product : products) {
+        List<String> names = new ArrayList<>();
+        for (WebElement product : products)
+
+
+        {
             names.add(product.getText());
         }
         return names;

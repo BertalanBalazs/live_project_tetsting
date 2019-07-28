@@ -56,7 +56,8 @@ public class ProductAddingTests extends BaseTest {
 
     @Test
     void addDifferentMultipleProductToShoppingCart() {
-        mainPage.navigate().clickOnFirstProductAddButton()
+        mainPage.navigate()
+                .clickOnFirstProductAddButton()
                 .clickOnFirstProductAddButton()
                 .clickOnThirdProductAddButton()
                 .clickOnThirdProductAddButton()

@@ -68,7 +68,6 @@ public class ShoppingCartPage extends Initializer {
             if (productQuantity == 0) {
                 value++;
             }
-
         }
     }
 
