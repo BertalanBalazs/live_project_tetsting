@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cfef92a-e4ed-4b4e-ba9c-e00c64b4482c" name="Default Changelist" comment="Customer service test is working correctly">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/BaseCucumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/RunCucumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/productAddingTests/AddMultipleProductToCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/productAddingTests/AddOneProductToCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/hellocucumber/cartoon.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0cfef92a-e4ed-4b4e-ba9c-e00c64b4482c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/stepDefs/ProductAddStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/AutoAnswer.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/Filter.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/ProductAdding.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/Search.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/ShoppingCartPage.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/Theme.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1.0.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/lpt/pageObjects/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/lpt/pageObjects/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/lpt/pageObjects/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/lpt/pageObjects/ShoppingCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/lpt/ProductAddingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/lpt/ProductAddingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/lpt/AutoAnswerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/lpt/AutoAnswerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/lpt/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/lpt/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/BaseCucumberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/productAddingTests/AddMultipleProductToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/productAddingTests/AddOneProductToCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hellocucumber/cartoon.feature" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,11 +90,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/cucumber" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -99,8 +104,12 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cucumber.productAddingTests" />
       <recent name="cucumber" />
       <recent name="com.codecool.lpt" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/cucumber" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -115,8 +124,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProductAddingTests.addDifferentMultipleProductToShoppingCart">
-    <configuration name="AddDifferentMultipleProductsToShoppingCartTest.addOneProductToShoppingCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FilterTests">
+    <configuration name="AutoAnswerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="1.0" />
       <extension name="coverage">
         <pattern>
@@ -125,9 +134,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.codecool.lpt" />
-      <option name="MAIN_CLASS_NAME" value="com.codecool.lpt.AddDifferentMultipleProductsToShoppingCartTest" />
-      <option name="METHOD_NAME" value="addOneProductToShoppingCart" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.lpt.AutoAnswerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="PARAMETERS" value="" />
       <envs>
         <env name="baseUrl" value="localhost:8080" />
@@ -137,7 +146,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddMultipleProductToShoppingCartTest.addOneProductToShoppingCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FilterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="1.0" />
       <extension name="coverage">
         <pattern>
@@ -146,30 +155,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.codecool.lpt" />
-      <option name="MAIN_CLASS_NAME" value="com.codecool.lpt.AddMultipleProductToShoppingCartTest" />
-      <option name="METHOD_NAME" value="addOneProductToShoppingCart" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.lpt.FilterTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="PARAMETERS" value="" />
       <envs>
         <env name="baseUrl" value="localhost:8080" />
-        <env name="webdriverPath" value="$PROJECT_DIR$/../../../../downloads/chrome/chromedriver" />
+        <env name="webdriverPath" value="$PROJECT_DIR$/../../../../downloads/chromedriver" />
+        <env name="nodeUrl" value=" http://10.44.1.248:5555/wd/hub" />
       </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddOneProductToShoppingCartTest.addOneProductToShoppingCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="1.0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codecool.lpt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.codecool.lpt" />
-      <option name="MAIN_CLASS_NAME" value="com.codecool.lpt.AddOneProductToShoppingCartTest" />
-      <option name="METHOD_NAME" value="addOneProductToShoppingCart" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,6 +180,27 @@
       <option name="MAIN_CLASS_NAME" value="com.codecool.lpt.ProductAddingTests" />
       <option name="METHOD_NAME" value="addDifferentMultipleProductToShoppingCart" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <envs>
+        <env name="baseUrl" value="localhost:8080" />
+        <env name="webdriverPath" value="$PROJECT_DIR$/../../../../downloads/chrome/chromedriver" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cucumber" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.RunCucumberTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="PARAMETERS" value="" />
       <envs>
         <env name="baseUrl" value="localhost:8080" />
@@ -219,6 +234,7 @@
       <envs>
         <env name="baseUrl" value="localhost:8080" />
         <env name="webdriverPath" value="$PROJECT_DIR$/../../../../downloads/chrome/chromedriver" />
+        <env name="nodeUrl" value="localhost:4444" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -294,19 +310,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Unnamed" />
-      <item itemvalue="JUnit.AddOneProductToShoppingCartTest.addOneProductToShoppingCart" />
-      <item itemvalue="JUnit.AddMultipleProductToShoppingCartTest.addOneProductToShoppingCart" />
-      <item itemvalue="JUnit.AddDifferentMultipleProductsToShoppingCartTest.addOneProductToShoppingCart" />
       <item itemvalue="JUnit.com.codecool.lpt in 1.0" />
       <item itemvalue="JUnit.ProductAddingTests.addDifferentMultipleProductToShoppingCart" />
+      <item itemvalue="JUnit.RunCucumberTest" />
+      <item itemvalue="JUnit.AutoAnswerTest" />
+      <item itemvalue="JUnit.FilterTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FilterTests" />
+        <item itemvalue="JUnit.RunCucumberTest" />
+        <item itemvalue="JUnit.AutoAnswerTest" />
         <item itemvalue="JUnit.ProductAddingTests.addDifferentMultipleProductToShoppingCart" />
         <item itemvalue="JUnit.com.codecool.lpt in 1.0" />
-        <item itemvalue="JUnit.AddDifferentMultipleProductsToShoppingCartTest.addOneProductToShoppingCart" />
-        <item itemvalue="JUnit.AddMultipleProductToShoppingCartTest.addOneProductToShoppingCart" />
-        <item itemvalue="JUnit.AddOneProductToShoppingCartTest.addOneProductToShoppingCart" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +340,15 @@
       <workItem from="1563973374454" duration="8693000" />
       <workItem from="1564050672497" duration="5961000" />
       <workItem from="1564093983571" duration="171000" />
-      <workItem from="1564141996434" duration="7471000" />
+      <workItem from="1564141996434" duration="12306000" />
+      <workItem from="1564491746790" duration="2041000" />
+      <workItem from="1564496645480" duration="4612000" />
+      <workItem from="1564501877762" duration="4687000" />
+      <workItem from="1564506622805" duration="6671000" />
+      <workItem from="1564739057600" duration="689000" />
+      <workItem from="1564989370983" duration="12122000" />
+      <workItem from="1565877206091" duration="834000" />
+      <workItem from="1567428909213" duration="3203000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1563783923067</created>
@@ -382,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564054329823</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Make inits for the cucumber/BDD test,make one test">
+      <created>1564328231310</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564328231310</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +433,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="init project" />
     <MESSAGE value="init base test" />
     <MESSAGE value="refactored checkoutpage and shoppingpage" />
@@ -410,6 +442,9 @@
     <MESSAGE value="all test and belonged methods refactored" />
     <MESSAGE value="Empty search test is working correctly" />
     <MESSAGE value="Customer service test is working correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer service test is working correctly" />
+    <MESSAGE value="Make inits for the cucumber/BDD test,make one test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make inits for the cucumber/BDD test,make one test" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -19,7 +19,7 @@ public class AutoAnswerTest extends BaseTest {
                 .clickOnCustomerService()
                 .sendKeyToCustomerServiceInput("Mi van bumburnyák kaparsz? Azt hiszed te vagy a Miki?")
                 .clickOnMessageSendButton()
-                .customerServiceAnswererName();
+                .getCustomerServiceAnswererName();
 
         assertEquals("Chuck_Norris", result);
     }

@@ -194,7 +194,7 @@ public class MainPage extends Initializer {
         return this;
     }
 
-    public String customerServiceAnswererName() {
+    public String getCustomerServiceAnswererName() {
         return getCustomerServiceAnswerTitle.getText();
     }
 
